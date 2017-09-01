@@ -18,6 +18,7 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@storybook/react": "^3.2.8"
+    "@storybook/react": "^3.2.8",
+    "@storybook/storybook-deployer": "^2.0.0"
   }
 }
