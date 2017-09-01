@@ -1,16 +1,18 @@
 import React from 'react';
 import { Dimensions } from 'react-native-web';
 import glam from 'glamorous-primitives';
+import { emerald, headerBorder, bodyBg, headerText } from './styles/colours';
 import Todo from './Todo';
 
+console.log(emerald);
+
 const { height: windowHeight } = Dimensions.get('window');
-const green = '#50e2c1';
 
 const Screen = glam.view({
   alignItems: 'stretch',
   alignContent: 'stretch',
   height: windowHeight,
-  backgroundColor: green,
+  backgroundColor: emerald,
   padding: 10,
 });
 
@@ -21,14 +23,19 @@ const Header = glam.view({
   padding: 10,
   marginBottom: 10,
   borderBottomWidth: 1,
-  borderBottomColor: 'rgba(0,0,0,0.1)',
+  borderBottomColor: headerBorder,
+});
+
+const Title = glam.text({
+  color: headerText,
+  fontWeight: 'bold',
 });
 
 const Body =  glam.view({
   flex: 1,
   justifyContent: 'space-around',
   padding: 10,
-  backgroundColor: '#fff',
+  backgroundColor: bodyBg,
   borderRadius: 3,
   padding: 10,
 });
@@ -42,14 +49,9 @@ const LittleThings = glam.view({
   flexDirection: 'row',
   justifyContent: 'stretch',
   alignContent: 'stretch',
-  borderTopColor: green,
+  borderTopColor: emerald,
   borderTopStyle: 'dotted',
   borderTopWidth: 2,
-});
-
-const Title = glam.text({
-  color: '#fff',
-  fontWeight: 'bold',
 });
 
 const App = () =>

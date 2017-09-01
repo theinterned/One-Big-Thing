@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import glam from 'glamorous-primitives';
+import { emptyText } from '../styles/colours';
 
 const { View } = glam;
-const emptyTextColor = '#ccc';
 
 const Input = glam.text(
   {
     fontWeight: 'lighter',
-    color: emptyTextColor,
+    color: emptyText,
   },
   ({ little }) => ({
     fontSize: little ? 60 : 120
@@ -16,7 +16,7 @@ const Input = glam.text(
 );
 
 const Button = glam.text({
-  color: emptyTextColor,
+  color: emptyText,
   flex: 1,
   textTransform: 'uppercase',
 });
