@@ -1,10 +1,9 @@
 import React from 'react';
 import { Dimensions } from 'react-native-web';
 import glam from 'glamorous-primitives';
+import Todo from './Todo';
 
 const { height: windowHeight } = Dimensions.get('window');
-
-const { Text } = glam;
 
 const Screen = glam.view({
   alignItems: 'stretch',
@@ -45,7 +44,7 @@ const App = () =>
       <Title>One Big Thing</Title>
     </Header>
     <Body>
-      <Text>Do it</Text>
+      <Todo>Do it</Todo>
     </Body>
   </Screen>;
 
