@@ -4,24 +4,35 @@ import glam from 'glamorous-primitives';
 import { emptyText } from '../styles/colours';
 
 const { View } = glam;
+const textColour = empty => empty ? emptyText : null;
 
 const Input = glam.text(
   {
     fontWeight: 'lighter',
-    color: emptyText,
   },
-  ({ little }) => ({
-    fontSize: little ? 60 : 120
+  ({ little, empty }) => ({
+    fontSize: little ? 60 : 120,
+    color: textColour(empty),
   })
 );
 
-const Button = glam.text({
-  flex: 1,
-  color: emptyText,
-  textTransform: 'uppercase',
-});
+const Button = glam.text(
+  {
+    flex: 1,
+    color: emptyText,
+    textTransform: 'uppercase',
+  },
+  ({ empty }) => ({
+    color: textColour(empty),
+  })
+);
 
-export default function Todo({ little = false, prompt = little ? 'Little Thing' : 'Big Thing' }) {
+export default function Todo({
+  children = null,
+  little = false,
+  prompt = little ? 'Little Thing' : 'Big Thing',
+  empty = children === null,
+}) {
   return (
     <View
       flex={1}
@@ -32,12 +43,15 @@ export default function Todo({ little = false, prompt = little ? 'Little Thing' 
       <View
         flex={8}
         justifyContent="center"
-      ><Input little={little}>+</Input></View>
-      <Button>{ prompt }</Button>
+      ><Input little={little} empty={empty}>+</Input></View>
+      <Button empty={empty}>{ prompt }</Button>
     </View>
   );
 }
 
 Todo.propTypes = {
+  children: PropTypes.node,
   little: PropTypes.bool,
+  prompt: PropTypes.string.isRequired,
+  empty: PropTypes.bool,
 }

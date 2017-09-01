@@ -57,7 +57,7 @@ const App = () =>
     </Header>
     <Things>
       <BigThing>
-        <Todo>Do it</Todo>
+        <Todo></Todo>
       </BigThing>
       <LittleThings>
         <Todo little></Todo>
