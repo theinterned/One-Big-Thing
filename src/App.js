@@ -1,6 +1,7 @@
 import React from 'react';
 import { Dimensions } from 'react-native-web';
 import glam from 'glamorous-primitives';
+import * as d from './styles/dimensions';
 import { emerald, headerBorder, bodyBg, headerText } from './styles/colours';
 import Todo from './Todo';
 
@@ -13,16 +14,16 @@ const Screen = glam.view({
   alignContent: 'stretch',
   height: windowHeight,
   backgroundColor: emerald,
-  padding: 10,
+  padding: d.gridUnit,
 });
 
 const Header = glam.view({
   flexDirection: 'row',
   flex: 0,
   justifyContent: 'space-around',
-  padding: 10,
-  marginBottom: 10,
-  borderBottomWidth: 1,
+  padding: d.gridUnit,
+  marginBottom: d.vUnit,
+  borderBottomWidth: d.border100,
   borderBottomColor: headerBorder,
 });
 
@@ -34,10 +35,10 @@ const Title = glam.text({
 const Body =  glam.view({
   flex: 1,
   justifyContent: 'space-around',
-  padding: 10,
+  padding: d.gridUnit,
   backgroundColor: bodyBg,
-  borderRadius: 3,
-  padding: 10,
+  borderRadius: d.borderRadius,
+  padding: d.gridUnit,
 });
 
 const BigThing = glam.view({
@@ -47,11 +48,11 @@ const BigThing = glam.view({
 const LittleThings = glam.view({
   flex: 1,
   flexDirection: 'row',
-  justifyContent: 'stretch',
+  justifyContent: 'space-between',
   alignContent: 'stretch',
   borderTopColor: emerald,
   borderTopStyle: 'dotted',
-  borderTopWidth: 2,
+  borderTopWidth: d.border200,
 });
 
 const App = () =>
