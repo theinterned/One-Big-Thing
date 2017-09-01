@@ -11,9 +11,10 @@ const Input = glam.text(
     fontWeight: 'lighter',
     textAlign: 'center',
   },
-  ({ little, empty }) => ({
+  ({ little, empty, done }) => ({
     fontSize: empty ? (little ? 60 : 120) : (little ? 30 : 60),
-    color: textColour(empty),
+    color: textColour(empty || done),
+    textDecorationLine: done && 'line-through',
   })
 );
 
@@ -23,8 +24,8 @@ const Button = glam.text(
     color: emptyText,
     textTransform: 'uppercase',
   },
-  ({ empty }) => ({
-    color: textColour(empty),
+  ({ empty, done }) => ({
+    color: textColour(empty || done),
   })
 );
 
@@ -33,7 +34,8 @@ export default function Todo({
   empty = children === null,
   todo = empty ? '+' : children,
   little = false,
-  prompt = little ? 'Little Thing' : 'Big Thing',
+  done = false,
+  prompt = empty ? (little ? 'Little Thing' : 'Big Thing') : '✔ Done',
 }) {
   return (
     <View
@@ -45,8 +47,8 @@ export default function Todo({
       <View
         flex={8}
         justifyContent="center"
-      ><Input little={little} empty={empty}>{ todo }</Input></View>
-      <Button empty={empty}>{ prompt }</Button>
+      ><Input little={little} empty={empty} done={done}>{ todo }</Input></View>
+      <Button empty={empty} done={done}>{ prompt }</Button>
     </View>
   );
 }
@@ -55,5 +57,6 @@ Todo.propTypes = {
   children: PropTypes.node,
   empty: PropTypes.bool,
   little: PropTypes.bool,
+  done: PropTypes.bool,
   prompt: PropTypes.string.isRequired,
 }
