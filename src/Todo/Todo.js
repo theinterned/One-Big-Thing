@@ -16,8 +16,8 @@ const Input = glam.text(
 );
 
 const Button = glam.text({
-  color: emptyText,
   flex: 1,
+  color: emptyText,
   textTransform: 'uppercase',
 });
 
