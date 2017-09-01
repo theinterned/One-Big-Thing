@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Dimensions } from 'react-native-web';
 import glam from 'glamorous-primitives';
 import * as d from './styles/dimensions';
@@ -50,21 +51,32 @@ const LittleThings = glam.view({
   borderTopWidth: d.border200,
 });
 
-const App = () =>
-  <Screen>
-    <Header>
-      <Title>One Big Thing</Title>
-    </Header>
-    <Things>
-      <BigThing>
-        <Todo></Todo>
-      </BigThing>
-      <LittleThings>
-        <Todo little></Todo>
-        <Todo little></Todo>
-        <Todo little></Todo>
-      </LittleThings>
-    </Things>
-  </Screen>;
+export default function App({ todos = [] }) {
+  const [ bigThing = {}, thingTwo = {}, thingThree = {}, thingFour = {} ] = todos;
+  return (
+    <Screen>
+      <Header>
+        <Title>One Big Thing</Title>
+      </Header>
+      <Things>
+        <BigThing>
+          <Todo done={bigThing.done}>{ bigThing.todo }</Todo>
+        </BigThing>
+        <LittleThings>
+          <Todo little done={thingTwo.done}>{ thingTwo.todo }</Todo>
+          <Todo little done={thingThree.done}>{ thingThree.todo }</Todo>
+          <Todo little done={thingFour.done}>{ thingFour.todo }</Todo>
+        </LittleThings>
+      </Things>
+    </Screen>
+  )
+}
 
-export default App;
+App.PropTypes = {
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      todo: PropTypes.node,
+      done: PropTypes.bool,
+    })
+  ),
+}

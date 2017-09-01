@@ -14,7 +14,7 @@ const Input = glam.text(
   ({ little, empty, done }) => ({
     fontSize: empty ? (little ? 60 : 120) : (little ? 30 : 60),
     color: textColour(empty || done),
-    textDecorationLine: done && 'line-through',
+    textDecorationLine: done ? 'line-through' : 'none',
   })
 );
 
