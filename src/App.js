@@ -32,7 +32,7 @@ const Title = glam.text({
   fontWeight: 'bold',
 });
 
-const Body =  glam.view({
+const Things =  glam.view({
   flex: 1,
   justifyContent: 'space-around',
   padding: d.gridUnit,
@@ -60,7 +60,7 @@ const App = () =>
     <Header>
       <Title>One Big Thing</Title>
     </Header>
-    <Body>
+    <Things>
       <BigThing>
         <Todo>Do it</Todo>
       </BigThing>
@@ -69,7 +69,7 @@ const App = () =>
         <Todo little></Todo>
         <Todo little></Todo>
       </LittleThings>
-    </Body>
+    </Things>
   </Screen>;
 
 export default App;
