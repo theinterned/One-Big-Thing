@@ -16,7 +16,7 @@ const Header = glam.view({
   padding: 10,
   marginBottom: 10,
   borderBottomWidth: 1,
-  borderBottomColor: 'rgba(0,0,0,0.25)',
+  borderBottomColor: 'rgba(0,0,0,0.1)',
 });
 
 const Body =  glam.view({
