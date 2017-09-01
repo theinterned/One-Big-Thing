@@ -31,7 +31,14 @@ storiesOf('App', module)
     <App todos={[
       { ...bigThing, done: true },
       thingTwo,
-      undefined,
+      { ...thingThree, done: true },
+    ]} />
+  ))
+  .add('with only little things', () => (
+    <App todos={[
+      false,
+      thingTwo,
+      false,
       { ...thingThree, done: true },
     ]} />
   ));
