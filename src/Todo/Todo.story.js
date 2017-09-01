@@ -6,18 +6,18 @@ storiesOf('Todo', module)
   .add('empty', () => (
     <Todo />
   ))
-  .add('empty little thing', () => (
-    <Todo little />
-  ))
-  .add('with something to do', () => (
+  .add('with a thing to do', () => (
     <Todo>I have ONE job</Todo>
-  ))
-  .add('little to do', () => (
-    <Todo little>I have ONE job</Todo>
   ))
   .add('done', () => (
     <Todo done>I did what needed to be done</Todo>
   ))
-  .add('little done', () => (
+  .add('little empty thing', () => (
+    <Todo little />
+  ))
+  .add('little thing to do', () => (
+    <Todo little>I have ONE job</Todo>
+  ))
+  .add('little done thing', () => (
     <Todo little done>I did what needed to be done</Todo>
   ));
