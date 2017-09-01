@@ -6,6 +6,9 @@ storiesOf('Todo', module)
   .add('empty', () => (
     <Todo />
   ))
+  .add('empty little thing', () => (
+    <Todo little />
+  ))
   .add('with something to do', () => (
     <Todo>I have ONE job</Todo>
   ))
