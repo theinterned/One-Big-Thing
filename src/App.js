@@ -10,16 +10,14 @@ console.log(emerald);
 const { height: windowHeight } = Dimensions.get('window');
 
 const Screen = glam.view({
-  alignItems: 'stretch',
-  alignContent: 'stretch',
   height: windowHeight,
   backgroundColor: emerald,
   padding: d.gridUnit,
 });
 
 const Header = glam.view({
-  flexDirection: 'row',
   flex: 0,
+  flexDirection: 'row',
   justifyContent: 'space-around',
   padding: d.gridUnit,
   marginBottom: d.vUnit,
@@ -34,7 +32,6 @@ const Title = glam.text({
 
 const Things =  glam.view({
   flex: 1,
-  justifyContent: 'space-around',
   padding: d.gridUnit,
   backgroundColor: bodyBg,
   borderRadius: d.borderRadius,
@@ -48,8 +45,6 @@ const BigThing = glam.view({
 const LittleThings = glam.view({
   flex: 1,
   flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignContent: 'stretch',
   borderTopColor: emerald,
   borderTopStyle: 'dotted',
   borderTopWidth: d.border200,
