@@ -1,17 +1,22 @@
 import React from 'react';
+import { Dimensions } from 'react-native-web';
 import glam from 'glamorous-primitives';
+
+const { height: windowHeight } = Dimensions.get('window');
 
 const { Text } = glam;
 
 const Screen = glam.view({
-  alignItems: 'center',
+  alignItems: 'stretch',
+  alignContent: 'stretch',
+  height: windowHeight,
   backgroundColor: '#50e2c1',
   padding: 10,
 });
 
 const Header = glam.view({
-  width: '100%',
   flexDirection: 'row',
+  flex: 0,
   justifyContent: 'space-around',
   padding: 10,
   marginBottom: 10,
@@ -20,8 +25,8 @@ const Header = glam.view({
 });
 
 const Body =  glam.view({
-  width: '100%',
   flexDirection: 'row',
+  flex: 1,
   justifyContent: 'space-around',
   padding: 10,
   backgroundColor: '#fff',
