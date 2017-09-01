@@ -2,10 +2,11 @@
 
 This is an homage to [One Big Thing](http://www.onebigthing.co). It's a great app that gives you [productivity super powers](https://medium.com/time-dorks/one-big-thing-a-simple-way-to-do-more-by-planning-less-5ce1428fd4fe): go download it and use it.
 
-## [📘 Preview the App in Storybook](http://theinterned.net/One-Big-Thing/)
+## 📘 Preview the App in Storybook
+http://theinterned.net/One-Big-Thing
 
 
-## 💻 Run the storybook locally
+## 💻 Run the Storybook locally
 
 ```shell
 yarn storybook
