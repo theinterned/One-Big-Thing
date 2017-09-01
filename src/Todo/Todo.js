@@ -12,7 +12,7 @@ const Input = glam.text(
     textAlign: 'center',
   },
   ({ little, empty, done }) => ({
-    fontSize: empty ? (little ? 60 : 120) : (little ? 30 : 60),
+    fontSize: empty ? (little ? 60 : 120) : (little ? 20 : 40),
     color: textColour(empty || done),
     textDecorationLine: done ? 'line-through' : 'none',
   })
@@ -23,6 +23,8 @@ const Button = glam.text(
     flex: 1,
     color: emptyText,
     textTransform: 'uppercase',
+    textAlign: 'center',
+    fontSize: 14,
   },
   ({ empty, done }) => ({
     color: textColour(empty || done),
