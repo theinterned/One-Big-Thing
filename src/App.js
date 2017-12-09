@@ -36,7 +36,6 @@ const Things =  glam.view({
   padding: d.gridUnit,
   backgroundColor: bodyBg,
   borderRadius: d.borderRadius,
-  padding: d.gridUnit,
 });
 
 const BigThing = glam.view({
