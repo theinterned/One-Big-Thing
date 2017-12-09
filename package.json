@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "glamorous-primitives": "git+https://github.com/theinterned/glamorous-primitives.git#6-fix-jest-create-react-app",
+    "prop-types": "^15.6.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-primitives": "^0.4.3",
