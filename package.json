@@ -7,7 +7,7 @@
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-primitives": "^0.4.3",
-    "react-scripts": "1.0.12"
+    "react-scripts": "1.0.17"
   },
   "scripts": {
     "start": "react-scripts start",
