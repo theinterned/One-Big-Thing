@@ -16,8 +16,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "NODE_PATH=src/ start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "deploy-storybook": "storybook-to-ghpages"
+    "build-storybook": "NODE_PATH=src/ build-storybook",
+    "deploy-storybook": "NODE_PATH=src/ storybook-to-ghpages"
   },
   "devDependencies": {
     "@storybook/react": "^3.2.8",
