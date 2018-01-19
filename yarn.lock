@@ -3563,9 +3563,9 @@ glamor@^2.20.40:
     prop-types "^15.5.10"
     through "^2.3.8"
 
-"glamorous-primitives@git+https://github.com/theinterned/glamorous-primitives.git#6-fix-jest-create-react-app":
+"glamorous-primitives@git+https://github.com/theinterned/glamorous-primitives.git#build":
   version "2.1.1"
-  resolved "git+https://github.com/theinterned/glamorous-primitives.git#5fb8142b207d5566fc242acf19323490173a3758"
+  resolved "git+https://github.com/theinterned/glamorous-primitives.git#0b680fe2c45ceefe2eaf4566bd1346ead47cd092"
   dependencies:
     brcast "^2.0.2"
     exenv "^1.2.2"
