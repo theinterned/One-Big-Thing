@@ -5,5 +5,8 @@ import TextInput from './';
 
 storiesOf('TextInput', module)
   .add('default', () => (
-    <TextInput />
+    <TextInput value="A text input" fontSize="2em" />
+  ))
+  .add('with passed styles object', () => (
+    <TextInput value="A text input" { ...{ fontSize: "2em" }} />
   ));
