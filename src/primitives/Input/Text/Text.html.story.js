@@ -3,26 +3,28 @@ import { storiesOf } from '@storybook/react';
 import glamorous from 'glamorous';
 import TextInput from './';
 
-
 const GlamInput = glamorous(TextInput)(
   {
     fontWeight: 'bold',
     textAlign: 'center',
-    borderWidth: "1px",
-    borderColor: "pink"
+    fontSize: '1.2em',
+    backgroundColor: 'pink',
+    borderWidth: '1px',
+    borderColor: 'red'
   },
-  ({ isItalic }) => ({
-    fontStyle: isItalic ? 'italic' : 'normal'
+  ({ italic }) => ({
+    fontStyle: italic ? 'italic' : 'normal'
   })
 );
 
 storiesOf('TextInput', module)
-  .add('default', () => (
-    <TextInput value="A text input" fontSize="2em" />
-  ))
+  .add('default', () => <TextInput value="A text input" fontSize="2em" />)
   .add('with passed styles object', () => (
-    <TextInput value="A text input" css={{ fontSize: "2em" }} />
+    <TextInput value="A text input" css={{ fontSize: '2em' }} />
   ))
   .add('Styled with glamorous', () => (
-    <GlamInput value="Glam Input" />
+    <div>
+      <GlamInput value="Glam Input" />
+      <GlamInput value="Italic Glam Input" italic />
+    </div>
   ));
