@@ -60,5 +60,5 @@ Todo.propTypes = {
   empty: PropTypes.bool,
   little: PropTypes.bool,
   done: PropTypes.bool,
-  prompt: PropTypes.string.isRequired,
+  prompt: PropTypes.string,
 }
