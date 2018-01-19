@@ -1,15 +1,19 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import glam from 'glamorous-primitives';
+import glamorous from 'glamorous';
+import primitive from 'glamorous-primitives';
+import TextInput from 'primitives/Input/Text'
 import { emptyText } from '../styles/colours';
 
-const { View } = glam;
+const { View } = primitive;
 const textColour = empty => empty ? emptyText : null;
 
-const Input = glam.text(
+const Input = glamorous(TextInput)(
   {
+    width: "100%",
     fontWeight: 'lighter',
     textAlign: 'center',
+    borderWidth: 0,
   },
   ({ little, empty, done }) => ({
     fontSize: empty ? (little ? 60 : 120) : (little ? 20 : 40),
@@ -18,7 +22,7 @@ const Input = glam.text(
   })
 );
 
-const Button = glam.text(
+const Button = primitive.text(
   {
     flex: 1,
     color: emptyText,
