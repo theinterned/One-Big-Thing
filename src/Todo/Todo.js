@@ -53,7 +53,7 @@ export default function Todo({
       <View
         flex={8}
         justifyContent="center"
-      ><Input little={little} empty={empty} done={done}>{ todo }</Input></View>
+      ><Input little={little} empty={empty} done={done} value={todo} /></View>
       <Button empty={empty} done={done}>{ prompt }</Button>
     </View>
   );
