@@ -30,7 +30,7 @@ const PrimitiveInput = primitive(TextInput, {
     borderColor: 'red'
   }));
 
-storiesOf('TextInput', module)
+storiesOf('primitives/TextInput', module)
   .add('default', () => <TextInput value="A text input" fontSize="2em" />)
   .add('with passed styles object', () => (
     <TextInput value="A text input" css={{ fontSize: '2em' }} />
